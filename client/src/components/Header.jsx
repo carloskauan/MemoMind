@@ -1,9 +1,10 @@
-import react from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Header() {
-    // const router = useRouter()
+    const { query } = useRouter()
+    console.log(query.id)
 
     if (true) {
         return (

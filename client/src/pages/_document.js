@@ -13,10 +13,7 @@ export default function Document() {
         <title>MemoMind</title>
       </Head> */}
       <body>
-        <Header></Header>
-        <main>
           <Main />
-        </main>
         <NextScript />
       </body>
     </Html>
