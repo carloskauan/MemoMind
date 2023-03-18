@@ -1,0 +1,441 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+// font-family: 'Quicksand', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+// font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500&display=swap');
+// font-family: 'Noto Serif Bengali', serif;
+
+
+// 300 = light
+// 400 regular
+// 500 == medium
+// 600 == semi-bold
+// 700 == bold
+
+/* ====== VARIÁVEIS ====== */
+    // CORES
+        $cor-primaria-forte: #8A4FFF;
+        $cor-primaria-escura: #6F3DD1;
+        $cor-primaria-clara: #A77BFF;
+
+        $cor-preta-forte: #0C0C0C;
+        $cor-preta-escuro: #262626;
+        $cor-preta-claro: #161616;
+
+        $cor-branca: #F6F8FF;
+
+    // TIPOGRAFIA
+
+        // headings
+
+            h1 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                font-size: 3.9rem;
+            }
+
+            h2 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 600;
+                font-size: 3.4rem;
+            }
+
+            h3 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 600;
+                font-size: 3rem;
+            }
+
+            h4 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2.8rem;
+            }
+
+            h5 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2.4rem;
+            }
+
+            h6 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+        // body
+
+            p, body {
+                font-family: 'Noto Serif Bengali', serif;
+                font-weight: 400;
+                font-size: 1.6rem;
+            }
+
+            .body-small {
+                font-size: 1.4rem;
+            }
+            
+            .body-large {   
+                font: 2.2rem;
+            }
+
+        // caption
+
+            span, .caption {
+                font-family: 'Noto Serif Bengali', serif;
+                font-weight: 500;
+                font-size: 1.7rem;
+            }
+
+            .caption-small {
+                font-size: 1.4rem;
+            }
+
+            .caption-large {
+                font-size: 2rem;
+            }
+
+        // button
+
+            button {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 1.9rem;
+            }
+
+            .button-small {
+                font-size: 1.6rem;
+            }
+
+            .button-large {
+                font-size: 2.2rem;
+            }
+
+        // link
+
+            a {
+                font-family: 'Noto Serif Bengali', serif;
+                font-weight: 400;
+                font-size: 2rem;
+            }
+
+            .link-small {
+                font-size: 1.7rem;
+            }
+
+            .link-large {
+                font-size: 2.3rem;
+            }
+
+        // label
+
+            label {
+                font-family: 'Noto Serif Bengali', serif;
+                font-weight: 300;
+                font-size: 1.4rem;
+            }
+
+            .label-small {
+                font-size: 1.3rem;
+            }
+
+            .label-large {
+                font-size: 1.9rem;
+            }
+
+/* ====== BODY/HTML/ROOT ====== */
+
+:root {
+    font-size: 65%;
+}
+
+body {
+    font-size: 1.8rem;
+    background-color: $cor-preta-forte;
+    color: $cor-branca;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $cor-preta-claro;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $cor-primaria-escura;
+}
+
+/* ====== HEADER ====== */
+
+header.logoout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem 3.6rem !important;
+
+    a {
+        color: $cor-primaria-clara;
+        transition: 0.5s all;
+        cursor: pointer;
+        margin: 0 1rem;
+
+        &:hover {
+            opacity: 80%;
+        }
+    }
+
+    .logo {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+header.login {
+    padding: 2.4rem 3.6rem !important;
+
+    .logo {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+/* ====== MAIN ====== */
+
+main {
+    padding: 0 2.5rem;
+
+    .signIn_signUp {
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .form {
+            margin: 0;
+            width: 46.5rem;
+            margin: 5rem auto;
+            display: flex;
+            flex-direction: column;
+
+            .ctr-input {
+                margin: 2.5rem 0;
+                height: 3rem;
+                
+                input {
+                    width: 100%;
+                    background-color: $cor-preta-forte;
+                    border: 1px solid $cor-primaria-escura;
+                    border-radius: 1rem;
+                    padding: 1.3rem;
+                    color: $cor-branca;
+                }
+    
+                label {
+                    font-size: 1.6rem;
+                    position: relative;
+                    left: 0.7rem;
+                    bottom: 3rem;
+                    background-color: $cor-preta-forte;
+                    transition: 0.3s all;    
+                    cursor: text;                
+
+                    &.click {
+                        bottom: 5rem;
+                        padding: 0 0.5rem;
+                        opacity: 90%;
+                    }
+                }
+            }
+    
+            button {
+                width: 100%;
+                background-color: $cor-primaria-escura;
+                color: $cor-branca;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                margin-top: 2.5rem;
+                transition: 0.5s all;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 80%;
+                }
+            }
+
+            .ctr-btn-google-github {
+                margin-top: 6rem;
+
+                .separador {
+                    margin-bottom: 2rem;
+                    hr {
+                        height: 0.1rem;
+                        background-color: $cor-branca;
+                    }
+    
+                    span {
+                        background-color: $cor-preta-forte;
+                        position: relative;
+                        padding: 0 1rem;
+                        bottom: 0.8rem;
+                        left: 45%;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                     
+                    .icon {
+                        margin-right: 1rem;
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                }
+
+                .btn-google {
+                    background-color: $cor-branca;
+                    color: $cor-preta-forte;
+                }
+
+                .btn-github {
+                    background-color: $cor-preta-escuro;
+                    color: $cor-branca;
+                }
+            }
+        }
+
+    }
+}
+
+/* ====== FOOTER ====== */
+
+footer {
+
+}
+
+/* ====== COMPONENTES ====== */
+
+.blur {
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1s opacity;
+
+    &.none {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    /*=== HTML ===*/
+    	// <div className="blur none"></div>
+}
+
+.ctr-modal {
+    transition: 0.7s all;
+    opacity: 100%;
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    left: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50rem;
+        height: fit-content;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: $cor-preta-forte;
+        color: $cor-branca;
+        box-shadow: 0 0 5px #fff;
+
+        .ctr-notice {
+            width: 100%;
+
+            .notice {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+                font-weight: 300;
+                line-height: 2.5rem;
+            }
+
+        }
+
+        button {
+            background-color: $cor-primaria-escura;
+            margin-top: 1rem;
+            border-radius: 1rem;
+            color: $cor-branca;
+            padding: 0.3rem 0.7rem;
+            transition: 0.5s all;
+
+            &:hover {
+                opacity: 80%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.close {
+        width: 0%;
+        opacity: 0;
+        user-select: none;
+        
+        button {
+            cursor: auto;
+        }
+    }
+    
+    /*=== HTML ===*/
+        // <div className="ctr-modal close">
+        //     <div className="modal">
+        //         <div className="ctr-notice">
+        //             <h3 className="notice">Aviso:</h3>
+        //             <p></p>
+        //         </div>
+
+        //         <button className="close button-small" id="buttonModalClose" onClick={() => {closeModal()}}>Fechar</button>
+        //     </div>
+        // </div>
+
+    /*=== JS ===*/
+        // const openModal = (msg) => {
+        //     const ctrModal = document.querySelector('.ctr-modal')
+
+        //     ctrModal.classList.remove('close')
+        //     document.querySelector('.modal p').innerHTML = msg
+
+        //     document.addEventListener('keydown', (key) => {
+        //         key = key.key
+                
+        //         if (key === 'Enter' || key === 'Escape') {
+        //             closeModal()
+        //         }
+        //     })
+        // }
+
+        // const closeModal = () => {
+        //     document.querySelector('.ctr-modal').classList.add('close')
+        //     document.querySelector('.ctr-modal button').focus()
+        // }
+}

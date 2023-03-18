@@ -1,0 +1,341 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500&display=swap");
+/* ====== VARIÁVEIS ====== */
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 3.9rem;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+p, body {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.body-small {
+  font-size: 1.4rem;
+}
+
+.body-large {
+  font: 2.2rem;
+}
+
+span, .caption {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.caption-small {
+  font-size: 1.4rem;
+}
+
+.caption-large {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.button-small {
+  font-size: 1.6rem;
+}
+
+.button-large {
+  font-size: 2.2rem;
+}
+
+a {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.link-small {
+  font-size: 1.7rem;
+}
+
+.link-large {
+  font-size: 2.3rem;
+}
+
+label {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.label-small {
+  font-size: 1.3rem;
+}
+
+.label-large {
+  font-size: 1.9rem;
+}
+
+/* ====== BODY/HTML/ROOT ====== */
+:root {
+  font-size: 65%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: #0C0C0C;
+  color: #F6F8FF;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #161616;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6F3DD1;
+}
+
+/* ====== HEADER ====== */
+header.logoout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 3.6rem !important;
+}
+header.logoout a {
+  color: #A77BFF;
+  transition: 0.5s all;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+header.logoout a:hover {
+  opacity: 80%;
+}
+header.logoout .logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+header.login {
+  padding: 2.4rem 3.6rem !important;
+}
+header.login .logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* ====== MAIN ====== */
+main {
+  padding: 0 2.5rem;
+}
+main .signIn_signUp h1 {
+  text-align: center;
+  margin-top: 0;
+}
+main .signIn_signUp .form {
+  margin: 0;
+  width: 46.5rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+}
+main .signIn_signUp .form .ctr-input {
+  margin: 2.5rem 0;
+  height: 3rem;
+}
+main .signIn_signUp .form .ctr-input input {
+  width: 100%;
+  background-color: #0C0C0C;
+  border: 1px solid #6F3DD1;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  color: #F6F8FF;
+}
+main .signIn_signUp .form .ctr-input label {
+  font-size: 1.6rem;
+  position: relative;
+  left: 0.7rem;
+  bottom: 3rem;
+  background-color: #0C0C0C;
+  transition: 0.3s all;
+  cursor: text;
+}
+main .signIn_signUp .form .ctr-input label.click {
+  bottom: 5rem;
+  padding: 0 0.5rem;
+  opacity: 90%;
+}
+main .signIn_signUp .form button {
+  width: 100%;
+  background-color: #6F3DD1;
+  color: #F6F8FF;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: 2.5rem;
+  transition: 0.5s all;
+}
+main .signIn_signUp .form button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+main .signIn_signUp .form .ctr-btn-google-github {
+  margin-top: 6rem;
+}
+main .signIn_signUp .form .ctr-btn-google-github .separador {
+  margin-bottom: 2rem;
+}
+main .signIn_signUp .form .ctr-btn-google-github .separador hr {
+  height: 0.1rem;
+  background-color: #F6F8FF;
+}
+main .signIn_signUp .form .ctr-btn-google-github .separador span {
+  background-color: #0C0C0C;
+  position: relative;
+  padding: 0 1rem;
+  bottom: 0.8rem;
+  left: 45%;
+}
+main .signIn_signUp .form .ctr-btn-google-github button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .signIn_signUp .form .ctr-btn-google-github button .icon {
+  margin-right: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main .signIn_signUp .form .ctr-btn-google-github .btn-google {
+  background-color: #F6F8FF;
+  color: #0C0C0C;
+}
+main .signIn_signUp .form .ctr-btn-google-github .btn-github {
+  background-color: #262626;
+  color: #F6F8FF;
+}
+
+/* ====== FOOTER ====== */
+/* ====== COMPONENTES ====== */
+.blur {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 1s opacity;
+  /*=== HTML ===*/
+}
+.blur.none {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.ctr-modal {
+  transition: 0.7s all;
+  opacity: 100%;
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  left: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  /*=== HTML ===*/
+  /*=== JS ===*/
+}
+.ctr-modal .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #0C0C0C;
+  color: #F6F8FF;
+  box-shadow: 0 0 5px #fff;
+}
+.ctr-modal .modal .ctr-notice {
+  width: 100%;
+}
+.ctr-modal .modal .ctr-notice .notice {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.ctr-modal .modal .ctr-notice p {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+.ctr-modal .modal button {
+  background-color: #6F3DD1;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  color: #F6F8FF;
+  padding: 0.3rem 0.7rem;
+  transition: 0.5s all;
+}
+.ctr-modal .modal button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+.ctr-modal.close {
+  width: 0%;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.ctr-modal.close button {
+  cursor: auto;
+}/*# sourceMappingURL=globals.css.map */
