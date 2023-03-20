@@ -1,14 +1,17 @@
 const express = require("express");
 const app = express();
 const HTTP_PORT = process.env.HTTP_PORT || 6060;
-const connection=require("./database/database")
-const rooter=require("../rooter")
+// const connection=require("./database/database")
+const rooter=require("../router.js")
+const cors = require('cors')
 
-connection.authenticate().then(()=>{
-  console.log("Conexão feita com sucesso")
-}).catch((error)=>{
-  console.log(error)
-});
+app.use(cors())
+
+// connection.authenticate().then(()=>{
+//   console.log("Conexão feita com sucesso")
+// }).catch((error)=>{
+//   console.log(error)
+// });
 
 app.use(express.json())
 
