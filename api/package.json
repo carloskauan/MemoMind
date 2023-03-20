@@ -1,23 +1,30 @@
 {
-  "name": "api",
+  "name": "memomind",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema de gerenciamento de notas escritas e lembretes.",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchALL",
+    "dev": "nodemon src/index.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloskauan/MemoMind.git"
+  },
+  "author": "Carlos Kauan, Victor Art e Mariana Borges.",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "mysql2": "^3.2.0",
-    "sequelize": "^6.29.3"
+  "bugs": {
+    "url": "https://github.com/carloskauan/MemoMind/issues"
   },
+  "homepage": "https://github.com/carloskauan/MemoMind#readme",
   "devDependencies": {
     "jest": "^29.5.0",
     "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.1"
   }
 }
