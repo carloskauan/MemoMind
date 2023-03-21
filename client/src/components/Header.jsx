@@ -3,9 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 export default function Header() {
-    const { query } = useRouter()
-    console.log(query.id)
-
     if (true) {
         return (
             <header className='logoout'>
