@@ -57,8 +57,8 @@ export default function SignIn() {
         )
 
 		const regexEmail = new RegExp(
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-        )
+			/^[a-zA-Z0-9-@]$/
+		)
 
         if (regexEmail.test(form.email)) {
             openModal(`Por favor não use careceres especiais`)
@@ -89,16 +89,19 @@ export default function SignIn() {
 				email: session?.user?.email,
 				nome: session?.user?.name,
 				senha: session?.user?.name,
-			})	
-			console.log(session.user)
-		} else {
+			}).then((res) => {
+				console.log(res.data)
+			}).catch((error) => console.log(error))
+			
+		} else if (provedor === false) {
 			if (validate()) {
 				Axios.post(` ${host_server}/signup`, {
 					email: form.email,
 					nome: form.senha,
 					senha: form.senha,
-				})
-				console.log(form)
+				}).then((res) => {
+					console.log(res.data)
+				}).catch((error) => console.log(error))
 			}
 		}
 	}
@@ -169,7 +172,7 @@ export default function SignIn() {
 						</div>
 					</div>
 
-					<button onClick={() => {f_sendData()}} className='btn-send'>Criar conta</button>
+					<button onClick={() => {f_sendData(false)}} className='btn-send'>Criar conta</button>
 
 					<BtnGoogleGithub/>
 				</div>

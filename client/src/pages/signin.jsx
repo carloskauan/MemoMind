@@ -55,16 +55,16 @@ export default function SignIn() {
         )
 
 		const regexEmail = new RegExp(
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-        )
+			/^[a-zA-Z0-9-@]$/
+		)
 
         if (regexEmail.test(form.email)) {
-            openModal(`Por favor não use careceres especiais`)
+            openModal(`Por favor use um e-mail válido`)
             isValidate = false
         }
 
         if (regexSenha.test(form.senha)) {
-            openModal(`Por favor não use careceres especiais`)
+            openModal(`Por favor não use careceres especiais na senha`)
             isValidate = false
         }
 
@@ -86,17 +86,20 @@ export default function SignIn() {
 			Axios.post(`${host_server}/signin`, {
 				email: session?.user?.email,
 				senha: session?.user?.name,
-			})	
-			console.log(session.user)
-		} else {
+			}).then((res) => {
+				console.log(res.data)
+			}).catch((error) => console.log(error))
+		} else if (provedor === false) {
 			if (validate()) {
 				Axios.post(` ${host_server}/signIn`, {
 					email: form.email,
 					senha: form.senha,
-				})
-				console.log(form)
+				}).then((res) => {
+					console.log(res.data)
+				}).catch((error) => console.log(error))
 			}
 		}
+
 	}
 
 	const openModal = (msg) => {
@@ -160,11 +163,10 @@ export default function SignIn() {
 						</div>
 					</div>
 
-					<button onClick={() => {f_sendData()}} className='btn-send'>Entrar</button>
+					<button onClick={() => {f_sendData(false)}} className='btn-send'>Entrar</button>
 
 					<BtnGoogleGithub/>
 				</div>
-
 			</div>
 		</main>
 	</>
